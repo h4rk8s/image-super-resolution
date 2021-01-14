@@ -1,4 +1,7 @@
 import tensorflow as tf
+tf.config.gpu.set_per_process_memory_fraction(0.5)
+tf.config.gpu.set_per_process_memory_growth(True)
+
 from tensorflow.keras.initializers import RandomUniform
 from tensorflow.keras.layers import concatenate, Input, Activation, Add, Conv2D, Lambda, UpSampling2D
 from tensorflow.keras.models import Model
